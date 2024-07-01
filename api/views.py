@@ -11,10 +11,10 @@ from .serializers import GreetingSerializer
 # Create your views here.
 @api_view(['GET'])
 def hello(request):
-    visitor_name = request.GET.get('visitor_name', 'Visitor')
+    visitor_name = request.GET.get('visitor_name', 'Lekan')
     client_ip = request.META.get('REMOTE_ADDR')
     location = 'Akure'
-    temperature = 27
+    temperature = 11
     greeting = f"Hello, {visitor_name}. the temperature is  {temperature} degrees celcius in {location}"
 
     data = {
